@@ -1,18 +1,70 @@
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <%@page isELIgnored="false" %>
-<!DOCTYPE html>
+ 
+ <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Admin: Home</title>
+<%@include file="allCss.jsp" %>
+<style type="text/css">
+a{
+text-decoration: none;
+color: black;
+}
+a: hover{
+text-decoration: none;
+color: black;
+}
+</style>
 </head>
 <body>
-<h1>User: Home</h1>
-<c:if test="${not empty userobj }">
-<h1>Name:${userobj.name }</h1>
-<h1>Email:${userobj.email }</h1>
-</c:if>
+<%@include file="navbar.jsp" %>
+  <div class="container">
+  <div class="row p-5">
+  <div class="col-md-3">
+  <a href="add_books.jsp">
+  <div class="card">
+  <div class="card-body text-center">
+   <i class="fa-solid fa-circle-plus fa-4x text-warning "></i><br>
+    <h4>Add Paintings</h4>
+  </div>
+  </div>
+  </a>
+  </div>
+   <div class="col-md-3">
+   <a href="books.jsp">
+  <div class="card">
+  <div class="card-body text-center">
+  <i class="fa-solid fa-image fa-4x text-success"></i><br>
+    <h4>All Paintings</h4>
+  </div>
+  </div>
+  </a>
+  </div>
+   <div class="col-md-3">
+   <a href="order.jsp">
+  <div class="card">
+  <div class="card-body text-center">
+  <i class="fa-solid fa-box-open fa-4x text-danger"></i><br>
+    <h4>Order</h4>
+  </div>
+  </div>
+  </a>
+  </div>
+   <div class="col-md-3">
+  <div class="card">
+  <div class="card-body text-center">
+   <i class="fa-solid fa-arrow-right-from-bracket fa-4x text-info"></i><br>
+    <h4>Logout</h4>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div style="margin-top: 130px";>
+     <%@include file="footer.jsp" %></div>
 </body>
 </html>
